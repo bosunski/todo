@@ -25,6 +25,6 @@ class TodoServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->make('Bosunski\Todo\Controllers\MainController');
+        $this->app->make('Bosunski\Todo\Controllers\MainController');
     }
 }

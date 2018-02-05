@@ -1,4 +1,2 @@
 <?php
-    Route::get('/todo', function () {
-        echo 'This is toDO';
-    });
+    Route::get('/todo', 'Bosunski\\Todo\\Controllers\\MainController@index');
