@@ -1,0 +1,21 @@
+{
+    "name": "bosunski/todo",
+    "description": "A Simple Laravel ToDo List Package",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bosun Egberinde",
+            "email": "bosunski@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Bosunski\\Todo\\TodoServiceProvider"
+            ]
+        }
+    }
+}
