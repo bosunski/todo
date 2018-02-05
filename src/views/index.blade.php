@@ -58,9 +58,9 @@
         </div>
       </div>
 
-      <div class="todo-list">
+      <!--<div class="todo-list">
         <pre>@{{ $data | json }}</pre>
-      </div>
+    </div>-->
     </div>
 
     <script type="text/javascript" src="https://unpkg.com/vue@2.4.2/dist/vue.min.js"></script>
