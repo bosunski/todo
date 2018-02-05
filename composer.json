@@ -10,12 +10,5 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {},
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Bosunski\\Todo\\TodoServiceProvider"
-            ]
-        }
-    }
+    "require": {}
 }
