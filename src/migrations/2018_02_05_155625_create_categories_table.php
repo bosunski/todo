@@ -13,7 +13,7 @@ class CreateCategoriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('categories', function (Blueprint $table) {
+        Schema::create('bosunski_categories', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title', 200);
             $table->timestamps();

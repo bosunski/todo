@@ -13,7 +13,7 @@ class CreateTasksTable extends Migration
      */
     public function up()
     {
-        Schema::create('tasks', function (Blueprint $table) {
+        Schema::create('bosunski_tasks', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title', 300);
             $table->boolean('completed');
