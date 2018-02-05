@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My ToDo</title>
+    <link rel="stylesheet" href="todo.css">
+    <link rel="stylesheet" href=" https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css ">
+  </head>
+  <body id="body">
+    <div id="app">
+      <div id="todo-container">
+        <h1 class="todo-head">Bosunski's ToDo</h1>
+        <div class="form-place">
+          <button class="todo-button" type="button"> <span class="fa fa-check-square-o"></span> </button>
+          <input type="text" @keyup.enter="saveTodo" v-model="new_todo" class="new-todo-input" placeholder="What do you wanna to do?"/>
+          <button class="todo-button" @click="saveTodo()" type="button"> <span class="fa fa-plus"></span> </button>
+          <button class="todo-button" type="button"> <span class="fa fa-minus-circle"></span> </button>
+        </div>
+
+        <div class="stats-place">
+          <div class="stats"> <span class="fa fa-line-chart"></span> {{ todos.length }} in ToDo List &nbsp; | &nbsp; <span class="fa fa-check-square-o"></span> {{ completed }} Completed</div>
+        </div>
+
+        <div v-for="todo in todos" class="todos">
+          <div class="each-todo">
+            <button :class="{'done' : todo.done, 'each-todo-button-done': !todo.done }" class="each-todo-button-done" @click="markDone(todo)" type="button"> <span class="fa fa-check-square-o"></span> </button>
+              <p class="todo-text">{{ todo.text }}</p>
+              <button class="each-todo-button-delete" @click="removeTodo(todo)" type="button"> <span class="fa fa-minus-circle"></span> </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="todo-list">
+        <pre>{{ $data | json }}</pre>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="https://unpkg.com/vue@2.4.2/dist/vue.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>
