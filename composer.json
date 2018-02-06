@@ -15,5 +15,12 @@
         "psr-4": {
             "Bosunski\\Todo\\": "src/"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Bosunski\\Todo\\TodoServiceProvider"
+            ]
+        }
     }
 }
